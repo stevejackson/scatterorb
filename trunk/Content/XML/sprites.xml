@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Sprites>
+  <Asteroid>
+    <Shape>Circle</Shape>
+    <Rotation>0</Rotation>
+    <XSize>10.5</XSize>
+    <YSize>10.5</YSize>
+    <Static>false</Static>
+    <Mass>20</Mass>
+  </Asteroid>
+</Sprites>
