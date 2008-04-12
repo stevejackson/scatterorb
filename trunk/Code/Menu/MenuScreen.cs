@@ -5,11 +5,49 @@ using Microsoft.Xna.Framework.Graphics;
 using F2D.Graphics.Gui;
 using F2D.Core;
 using F2D.Input;
+using Microsoft.Xna.Framework.Input;
 
 namespace Scatter.Menu
 {
     abstract class MenuScreen : GameScreen
     {
+
+        #region Input
+
+        public bool InputMenuUp
+        {
+            get
+            {
+                return Director.input.IsNewKeyPress(Keys.Up);
+            }
+        }
+
+        public bool InputMenuDown
+        {
+            get
+            {
+                return Director.input.IsNewKeyPress(Keys.Down);
+            }
+        }
+
+        public bool InputMenuSelect
+        {
+            get
+            {
+                return Director.input.IsNewKeyPress(Keys.Space) ||
+                       Director.input.IsNewKeyPress(Keys.Enter);
+            }
+        }
+
+        public bool InputMenuCancel
+        {
+            get
+            {
+                return Director.input.IsNewKeyPress(Keys.Escape);
+            }
+        }
+
+        #endregion
 
         List<MenuEntry> menuEntries = new List<MenuEntry>();
         int selectedEntry = 0;
@@ -30,8 +68,8 @@ namespace Scatter.Menu
 
         public override void HandleInput(InputState input)
         {
-            /*// Move to the previous menu entry?
-            if (input.MenuUp)
+            // Move to the previous menu entry?
+            if (this.InputMenuUp)
             {
                 selectedEntry--;
 
@@ -39,7 +77,7 @@ namespace Scatter.Menu
                     selectedEntry = menuEntries.Count - 1;
             }
             // Move to the next menu entry?
-            if (input.MenuDown)
+            if (this.InputMenuDown)
             {
                 selectedEntry++;
 
@@ -48,14 +86,14 @@ namespace Scatter.Menu
             }
 
             // Accept or cancel the menu?
-            if (input.MenuSelect)
+            if (this.InputMenuSelect)
             {
                 OnSelectEntry(selectedEntry);
             }
-            else if (input.MenuCancel)
+            else if (this.InputMenuCancel)
             {
                 OnCancel();
-            }*/
+            }
 
             //Override keyboard input with Mouse: it gets priority
             for (int i = 0; i < MenuEntries.Count; i++)
@@ -107,7 +145,6 @@ namespace Scatter.Menu
 
         public override void Draw(GameTime gameTime)
         {
-            Director.Game.Window.Title = "GOT HERE";
             Vector2 position = new Vector2(1100, 250);
 
             // Make the menu slide into place during transitions, using a
