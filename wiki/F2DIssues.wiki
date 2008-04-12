@@ -1,0 +1,4 @@
+#summary Issues encountered while testing out Frostwave
+
+  * Not sure if we fixed LoadContent/UnloadContent problem
+  * Using XML for every sprite is a bit of a hassle
