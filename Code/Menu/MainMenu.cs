@@ -32,8 +32,8 @@ namespace Scatter.Menu
         }
 
         void LevelMenuEntrySelected(object sender, EventArgs e)
-        {            
-            Director.AddScreen(new Scatter.Logic.Level());
+        {
+            Director.SwitchScreen(false, new Scatter.Logic.Level());
         }       
 
         protected override void OnCancel()

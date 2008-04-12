@@ -31,7 +31,7 @@ namespace Scatter.Core
         protected override void Initialize()
         {
             screenManager = new Director(this, graphics);
-            Grid.Initialize(200, new Vector2(1600, 1200), 1);
+            Grid.Initialize(400, new Vector2(1600, 1200), 2);
 
             Camera.Initialize(new Vector2(0, 0), new Vector2(1600, 1200));
 
@@ -41,7 +41,6 @@ namespace Scatter.Core
 
             screenManager.AddScreen(new Background());
             screenManager.AddScreen(new MainMenu());
-            screenManager.AddScreen(new Scatter.Logic.Level());
 
             this.IsFixedTimeStep = false;
             base.Initialize();
@@ -49,7 +48,7 @@ namespace Scatter.Core
 
         protected override void LoadContent()
         {
-
+           
         }
 
         protected override void UnloadContent()

@@ -7,17 +7,8 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Documents and Settings\Vedran\My Documents\Visual Studio 2005\Projects\GameDev\Scatter\Scatter\bin\x86\Debug\Content\Graphics\fonts\jbrush.xnb</Output>
-      <Time>2008-02-09T14:57:23.984375-08:00</Time>
-    </Item>
-    <Item>
-      <Source>Graphics\Asteroid.png</Source>
-      <Name>Graphics\Asteroid</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Documents and Settings\Vedran\My Documents\Visual Studio 2005\Projects\GameDev\Scatter\Scatter\bin\x86\Debug\Content\Graphics\Asteroid.xnb</Output>
-      <Time>2008-02-16T16:28:12.203125-08:00</Time>
+      <Output>G:\Development\Game\Scatter\Scatter\bin\x86\Debug\Content\Graphics\fonts\jbrush.xnb</Output>
+      <Time>2008-04-11T20:34:58-04:00</Time>
     </Item>
     <Item>
       <Source>Graphics\bgCell.png</Source>
@@ -25,8 +16,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Documents and Settings\Vedran\My Documents\Visual Studio 2005\Projects\GameDev\Scatter\Scatter\bin\x86\Debug\Content\Graphics\bgCell.xnb</Output>
-      <Time>2008-02-09T14:57:24.140625-08:00</Time>
+      <Output>G:\Development\Game\Scatter\Scatter\bin\x86\Debug\Content\Graphics\bgCell.xnb</Output>
+      <Time>2008-04-11T20:34:58-04:00</Time>
     </Item>
     <Item>
       <Source>Graphics\Cursor.png</Source>
@@ -34,8 +25,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Documents and Settings\Vedran\My Documents\Visual Studio 2005\Projects\GameDev\Scatter\Scatter\bin\x86\Debug\Content\Graphics\Cursor.xnb</Output>
-      <Time>2008-02-09T14:57:24.125-08:00</Time>
+      <Output>G:\Development\Game\Scatter\Scatter\bin\x86\Debug\Content\Graphics\Cursor.xnb</Output>
+      <Time>2008-04-11T20:34:58-04:00</Time>
     </Item>
     <Item>
       <Source>Graphics\global\blank.png</Source>
@@ -43,8 +34,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Documents and Settings\Vedran\My Documents\Visual Studio 2005\Projects\GameDev\Scatter\Scatter\bin\x86\Debug\Content\Graphics\global\blank.xnb</Output>
-      <Time>2008-02-09T14:57:06.8125-08:00</Time>
+      <Output>G:\Development\Game\Scatter\Scatter\bin\x86\Debug\Content\Graphics\global\blank.xnb</Output>
+      <Time>2008-04-11T20:34:48-04:00</Time>
     </Item>
     <Item>
       <Source>Graphics\menu\buttons\back_d.png</Source>
@@ -52,8 +43,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Documents and Settings\Vedran\My Documents\Visual Studio 2005\Projects\GameDev\Scatter\Scatter\bin\x86\Debug\Content\Graphics\menu\buttons\back_d.xnb</Output>
-      <Time>2008-02-09T14:57:22.90625-08:00</Time>
+      <Output>G:\Development\Game\Scatter\Scatter\bin\x86\Debug\Content\Graphics\menu\buttons\back_d.xnb</Output>
+      <Time>2008-04-11T20:34:58-04:00</Time>
     </Item>
     <Item>
       <Source>Graphics\menu\buttons\back_h.png</Source>
@@ -61,8 +52,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Documents and Settings\Vedran\My Documents\Visual Studio 2005\Projects\GameDev\Scatter\Scatter\bin\x86\Debug\Content\Graphics\menu\buttons\back_h.xnb</Output>
-      <Time>2008-02-09T14:57:22.96875-08:00</Time>
+      <Output>G:\Development\Game\Scatter\Scatter\bin\x86\Debug\Content\Graphics\menu\buttons\back_h.xnb</Output>
+      <Time>2008-04-11T20:34:58-04:00</Time>
     </Item>
     <Item>
       <Source>Graphics\menu\buttons\back_i.png</Source>
@@ -70,8 +61,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Documents and Settings\Vedran\My Documents\Visual Studio 2005\Projects\GameDev\Scatter\Scatter\bin\x86\Debug\Content\Graphics\menu\buttons\back_i.xnb</Output>
-      <Time>2008-02-09T14:57:22.984375-08:00</Time>
+      <Output>G:\Development\Game\Scatter\Scatter\bin\x86\Debug\Content\Graphics\menu\buttons\back_i.xnb</Output>
+      <Time>2008-04-11T20:34:58-04:00</Time>
     </Item>
     <Item>
       <Source>Graphics\menu\buttons\credits_d.png</Source>
@@ -79,8 +70,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Documents and Settings\Vedran\My Documents\Visual Studio 2005\Projects\GameDev\Scatter\Scatter\bin\x86\Debug\Content\Graphics\menu\buttons\credits_d.xnb</Output>
-      <Time>2008-02-09T14:57:22.875-08:00</Time>
+      <Output>G:\Development\Game\Scatter\Scatter\bin\x86\Debug\Content\Graphics\menu\buttons\credits_d.xnb</Output>
+      <Time>2008-04-11T20:34:58-04:00</Time>
     </Item>
     <Item>
       <Source>Graphics\menu\buttons\credits_h.png</Source>
@@ -88,8 +79,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Documents and Settings\Vedran\My Documents\Visual Studio 2005\Projects\GameDev\Scatter\Scatter\bin\x86\Debug\Content\Graphics\menu\buttons\credits_h.xnb</Output>
-      <Time>2008-02-09T14:57:22.9375-08:00</Time>
+      <Output>G:\Development\Game\Scatter\Scatter\bin\x86\Debug\Content\Graphics\menu\buttons\credits_h.xnb</Output>
+      <Time>2008-04-11T20:34:58-04:00</Time>
     </Item>
     <Item>
       <Source>Graphics\menu\buttons\credits_i.png</Source>
@@ -97,8 +88,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Documents and Settings\Vedran\My Documents\Visual Studio 2005\Projects\GameDev\Scatter\Scatter\bin\x86\Debug\Content\Graphics\menu\buttons\credits_i.xnb</Output>
-      <Time>2008-02-09T14:57:22.953125-08:00</Time>
+      <Output>G:\Development\Game\Scatter\Scatter\bin\x86\Debug\Content\Graphics\menu\buttons\credits_i.xnb</Output>
+      <Time>2008-04-11T20:34:58-04:00</Time>
     </Item>
     <Item>
       <Source>Graphics\menu\buttons\endmode_d.png</Source>
@@ -106,8 +97,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Documents and Settings\Vedran\My Documents\Visual Studio 2005\Projects\GameDev\Scatter\Scatter\bin\x86\Debug\Content\Graphics\menu\buttons\endmode_d.xnb</Output>
-      <Time>2008-02-09T14:57:23.125-08:00</Time>
+      <Output>G:\Development\Game\Scatter\Scatter\bin\x86\Debug\Content\Graphics\menu\buttons\endmode_d.xnb</Output>
+      <Time>2008-04-11T20:34:58-04:00</Time>
     </Item>
     <Item>
       <Source>Graphics\menu\buttons\endmode_h.png</Source>
@@ -115,8 +106,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Documents and Settings\Vedran\My Documents\Visual Studio 2005\Projects\GameDev\Scatter\Scatter\bin\x86\Debug\Content\Graphics\menu\buttons\endmode_h.xnb</Output>
-      <Time>2008-02-09T14:57:23.328125-08:00</Time>
+      <Output>G:\Development\Game\Scatter\Scatter\bin\x86\Debug\Content\Graphics\menu\buttons\endmode_h.xnb</Output>
+      <Time>2008-04-11T20:34:58-04:00</Time>
     </Item>
     <Item>
       <Source>Graphics\menu\buttons\endmode_i.png</Source>
@@ -124,8 +115,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Documents and Settings\Vedran\My Documents\Visual Studio 2005\Projects\GameDev\Scatter\Scatter\bin\x86\Debug\Content\Graphics\menu\buttons\endmode_i.xnb</Output>
-      <Time>2008-02-09T14:57:23.375-08:00</Time>
+      <Output>G:\Development\Game\Scatter\Scatter\bin\x86\Debug\Content\Graphics\menu\buttons\endmode_i.xnb</Output>
+      <Time>2008-04-11T20:34:58-04:00</Time>
     </Item>
     <Item>
       <Source>Graphics\menu\buttons\exit_d.png</Source>
@@ -133,8 +124,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Documents and Settings\Vedran\My Documents\Visual Studio 2005\Projects\GameDev\Scatter\Scatter\bin\x86\Debug\Content\Graphics\menu\buttons\exit_d.xnb</Output>
-      <Time>2008-02-09T14:57:23.0625-08:00</Time>
+      <Output>G:\Development\Game\Scatter\Scatter\bin\x86\Debug\Content\Graphics\menu\buttons\exit_d.xnb</Output>
+      <Time>2008-04-11T20:34:58-04:00</Time>
     </Item>
     <Item>
       <Source>Graphics\menu\buttons\exit_h.png</Source>
@@ -142,8 +133,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Documents and Settings\Vedran\My Documents\Visual Studio 2005\Projects\GameDev\Scatter\Scatter\bin\x86\Debug\Content\Graphics\menu\buttons\exit_h.xnb</Output>
-      <Time>2008-02-09T14:57:23.21875-08:00</Time>
+      <Output>G:\Development\Game\Scatter\Scatter\bin\x86\Debug\Content\Graphics\menu\buttons\exit_h.xnb</Output>
+      <Time>2008-04-11T20:34:58-04:00</Time>
     </Item>
     <Item>
       <Source>Graphics\menu\buttons\exit_i.png</Source>
@@ -151,47 +142,47 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Documents and Settings\Vedran\My Documents\Visual Studio 2005\Projects\GameDev\Scatter\Scatter\bin\x86\Debug\Content\Graphics\menu\buttons\exit_i.xnb</Output>
-      <Time>2008-02-09T14:57:23.28125-08:00</Time>
+      <Output>G:\Development\Game\Scatter\Scatter\bin\x86\Debug\Content\Graphics\menu\buttons\exit_i.xnb</Output>
+      <Time>2008-04-11T20:34:58-04:00</Time>
     </Item>
     <Item>
-      <Source>Graphics\menu\textbox.png</Source>
-      <Name>Graphics\menu\textbox</Name>
+      <Source>Graphics\paddle.png</Source>
+      <Name>Graphics\paddle</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Documents and Settings\Vedran\My Documents\Visual Studio 2005\Projects\GameDev\Scatter\Scatter\bin\x86\Debug\Content\Graphics\menu\textbox.xnb</Output>
-      <Time>2008-02-09T14:51:14.5-08:00</Time>
+      <Output>G:\Development\Game\Scatter\Scatter\bin\x86\Debug\Content\Graphics\paddle.xnb</Output>
+      <Time>2008-04-11T21:01:16-04:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>
       <BuildConfiguration>Debug</BuildConfiguration>
-      <RootDirectory>C:\Documents and Settings\Vedran\My Documents\Visual Studio 2005\Projects\GameDev\Scatter\Scatter\Content\</RootDirectory>
-      <LoggerRootDirectory>C:\Documents and Settings\Vedran\My Documents\Visual Studio 2005\Projects\GameDev\Scatter\Scatter\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Documents and Settings\Vedran\My Documents\Visual Studio 2005\Projects\GameDev\Scatter\Scatter\Content\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Documents and Settings\Vedran\My Documents\Visual Studio 2005\Projects\GameDev\Scatter\Scatter\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>G:\Development\Game\Scatter\Scatter\Content\</RootDirectory>
+      <LoggerRootDirectory>G:\Development\Game\Scatter\Scatter\</LoggerRootDirectory>
+      <IntermediateDirectory>G:\Development\Game\Scatter\Scatter\Content\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>G:\Development\Game\Scatter\Scatter\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
         <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v2.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
-        <Value>2007-11-28T13:08:00-08:00</Value>
+        <Value>2007-11-28T13:08:00-05:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v2.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
-        <Value>2007-11-28T13:08:42-08:00</Value>
+        <Value>2007-11-28T13:08:42-05:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v2.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
-        <Value>2007-11-28T13:08:30-08:00</Value>
+        <Value>2007-11-28T13:08:30-05:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v2.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
-        <Value>2007-11-28T13:07:44-08:00</Value>
+        <Value>2007-11-28T13:07:44-05:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\WINDOWS\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\2.0.0.0__6d5c3888ef60e27d\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2008-01-05T15:59:44.125-08:00</Value>
+        <Value>2008-01-05T22:40:21.84375-05:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

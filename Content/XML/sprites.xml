@@ -8,4 +8,12 @@
     <Static>false</Static>
     <Mass>20</Mass>
   </Asteroid>
+  <Paddle>
+	<Shape>Circle</Shape>
+	<Rotation>0</Rotation>
+	<XSize>150</XSize>
+	<YSize>20</YSize>
+	<Static>false</Static>
+	<Mass>10</Mass>
+  </Paddle>
 </Sprites>
