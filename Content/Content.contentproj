@@ -171,11 +171,6 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="Graphics\tiles\open.png">
-      <Name>open</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
     <Compile Include="Graphics\tiles\RedOrbEmitter.png">
       <Name>RedOrbEmitter</Name>
       <Importer>TextureImporter</Importer>
@@ -183,6 +178,16 @@
     </Compile>
     <Compile Include="Graphics\tiles\RedTube.png">
       <Name>RedTube</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Graphics\tiles\Hole.png">
+      <Name>Hole</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Graphics\Orb.png">
+      <Name>Orb</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
