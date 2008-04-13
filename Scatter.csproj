@@ -61,6 +61,7 @@
     <Compile Include="Code\Logic\BorderType.cs" />
     <Compile Include="Code\Logic\Level.cs" />
     <Compile Include="Code\Logic\Orb.cs" />
+    <Compile Include="Code\Logic\OrbEmitter.cs" />
     <Compile Include="Code\Menu\Background.cs" />
     <Compile Include="Code\Menu\MainMenu.cs" />
     <Compile Include="Code\Menu\MenuEntry.cs" />
@@ -83,6 +84,10 @@
     <ProjectReference Include="..\..\Frostwave 2D\F2D\F2D.csproj">
       <Project>{7D1BA0E6-3062-4DEF-8D6A-83FA6CD3BEBD}</Project>
       <Name>F2D</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Frostwave 2D\FarseerPhysics\FarseerPhysics.csproj">
+      <Project>{48E7E660-6728-40F9-91AB-AFCD9477EF5F}</Project>
+      <Name>FarseerPhysics</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

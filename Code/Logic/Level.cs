@@ -71,6 +71,7 @@ namespace Scatter.Logic
             paddle.LoadContent(this.content, @"Content\Graphics\paddle");
 
             Director.Rat.setVisible();
+
         }
 
         public override void UnloadContent()
@@ -85,28 +86,44 @@ namespace Scatter.Logic
         {
             base.Update(gameTime, otherScreenHasFocus, false);
 
-
+            Farseer.Physics.Update((float)gameTime.ElapsedGameTime.TotalSeconds);
+            borderSys.Update();
         }
 
         public override void HandleInput(InputState input)
         {
+            float force = 500;
+            Vector2 forceAmount = new Vector2(0);
+
             /* debug input */
             if (input.IsNewKeyPress(Keys.C))
             {
                 Director.RenderCells = !Director.RenderCells;
             }
 
-            /* Game input */
+            /* Game input */            
             for (int i = 0; i < InputState.MaxInputs; i++)
-            {
+            {               
+
                 if (input.CurrentKeyboardStates[i].IsKeyDown(Keys.A))
-                    paddle.Rotation -= 0.015f;
+                    forceAmount += new Vector2(-force, 0);
 
                 if (input.CurrentKeyboardStates[i].IsKeyDown(Keys.D))
-                    paddle.Rotation += 0.015f;
+                    forceAmount += new Vector2(force, 0);
+
+                if (input.CurrentKeyboardStates[i].IsKeyDown(Keys.W))
+                    forceAmount += new Vector2(0, -force);
+
+                if (input.CurrentKeyboardStates[i].IsKeyDown(Keys.S))
+                    forceAmount += new Vector2(0, force);
             }
+
+            paddle.physicsBody.ApplyForce(forceAmount);
             
-            paddle.Position = Director.Rat.Position;
+
+            paddle.Origin = new Vector2(paddle.Size.X / 2, paddle.Size.Y / 2);
+
+            //paddle.Position = Director.Rat.Position;
             //paddle.Rotation = TurnToFace(paddle.Position, Director.Rat.Position, paddle.Rotation, 180f);
 
         }
@@ -185,6 +202,9 @@ namespace Scatter.Logic
         {
             Rectangle fullscreen = new Rectangle(0, 0, 1600, 1200);
             byte fade = TransitionAlpha;
+
+            Director.Game.Window.Title = paddle.physicsBody.Torque.ToString();
+
         }
 
     }
