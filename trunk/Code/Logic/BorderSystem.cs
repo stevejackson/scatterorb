@@ -34,9 +34,14 @@ namespace Scatter.Logic
             {
                 top[i] = new BorderTile();
                 bottom[i] = new BorderTile();
+                
+                top[i].Initialize(new Vector2(50 + i * 100, 50), BorderType.CLCR);
+                top[i].sprite.Origin = new Vector2(top[i].sprite.Size.X / 2, top[i].sprite.Size.Y / 2);
+                top[i].sprite.Rotation = (float)Math.PI;
 
-                top[i].Initialize(new Vector2(i * 100, 0), BorderType.CLCR);
-                bottom[i].Initialize(new Vector2(i * 100, 1100), BorderType.CLCR);
+                bottom[i].Initialize(new Vector2(50 + i * 100, 1150), BorderType.CLCR);
+                bottom[i].sprite.Origin = new Vector2(bottom[i].sprite.Size.X / 2, bottom[i].sprite.Size.Y / 2);
+                bottom[i].sprite.Rotation = 0f;
             }
 
             for (int i = 0; i < left.Length; i++)
@@ -44,8 +49,13 @@ namespace Scatter.Logic
                 left[i] = new BorderTile();
                 right[i] = new BorderTile();
 
-                left[i].Initialize(new Vector2(0, 100 + (i * 100)), BorderType.CLCR);
-                right[i].Initialize(new Vector2(1500, 100 + (i * 100)), BorderType.CLCR);
+                left[i].Initialize(new Vector2(50, 150 + (i * 100)), BorderType.CLCR);
+                left[i].sprite.Origin = new Vector2(left[i].sprite.Size.X / 2, left[i].sprite.Size.Y / 2);
+                left[i].sprite.Rotation = (float)Math.PI / 2;
+
+                right[i].Initialize(new Vector2(1550, 150 + (i * 100)), BorderType.CLCR);
+                right[i].sprite.Origin = new Vector2(right[i].sprite.Size.X / 2, right[i].sprite.Size.Y / 2);
+                right[i].sprite.Rotation = 3 * (float)Math.PI / 2;
             }
         }
 
