@@ -3,32 +3,24 @@
   <Asteroid>
     <Shape>Circle</Shape>
     <Rotation>0</Rotation>
-    <XSize>10.5</XSize>
-    <YSize>10.5</YSize>
     <Static>false</Static>
     <Mass>20</Mass>
   </Asteroid>
   <Paddle>
 	<Shape>Rect</Shape>
 	<Rotation>0</Rotation>
-	<XSize>150</XSize>
-	<YSize>20</YSize>
 	<Static>false</Static>
 	<Mass>10</Mass>
   </Paddle>
 	<BorderTile>
 		<Shape>Rect</Shape>
 		<Rotation>0</Rotation>
-		<XSize>150</XSize>
-		<YSize>20</YSize>
 		<Static>true</Static>
 		<Mass>10</Mass>
 	</BorderTile>
 	<Orb>
 		<Shape>Rect</Shape>
 		<Rotation>0</Rotation>
-		<XSize>150</XSize>
-		<YSize>20</YSize>
 		<Static>false</Static>
 		<Mass>10</Mass>
 	</Orb>
