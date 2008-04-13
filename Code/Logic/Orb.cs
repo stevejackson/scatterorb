@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Scatter.Logic
 {
-    class Orb
+    public class Orb
     {
     }
 }

@@ -136,6 +136,11 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
+    <Compile Include="Graphics\tiles\CLCR.png">
+      <Name>CLCR</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
     <Content Include="XML\sprites.xml">
       <Name>sprites</Name>
       <Importer>XmlImporter</Importer>

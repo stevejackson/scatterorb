@@ -21,7 +21,7 @@ namespace Scatter.Core
     public class Game : Microsoft.Xna.Framework.Game
     {
         GraphicsDeviceManager graphics;
-        Director screenManager;
+        Director director;
 
         public Game()
         {
@@ -30,17 +30,17 @@ namespace Scatter.Core
 
         protected override void Initialize()
         {
-            screenManager = new Director(this, graphics);
+            director = new Director(this, graphics);
             Grid.Initialize(400, new Vector2(1600, 1200), 2);
 
             Camera.Initialize(new Vector2(0, 0), new Vector2(1600, 1200));
 
-            screenManager.Initialize();
+            director.Initialize();
 
-            Components.Add(screenManager);
-
-            screenManager.AddScreen(new Background());
-            screenManager.AddScreen(new MainMenu());
+            Components.Add(director);
+        
+            director.AddScreen(new Background());
+            director.AddScreen(new MainMenu());
 
             this.IsFixedTimeStep = false;
             base.Initialize();
@@ -62,10 +62,10 @@ namespace Scatter.Core
         {
             Grid.ParentCell = new Vector2Int(1, 1);
 
-            screenManager.Update(gameTime);
+            director.Update(gameTime);
             base.Update(gameTime);
 
-            Window.Title = Director.FramesPerSecond.ToString();
+            //Window.Title = Director.FramesPerSecond.ToString();
 
         }
 

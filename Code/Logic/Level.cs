@@ -49,19 +49,23 @@ namespace Scatter.Logic
 
         #endregion
 
+        private BorderSystem borderSys;
+  
         public Level()
         {
             TransitionOnTime = TimeSpan.FromSeconds(0.5);
             TransitionOffTime = TimeSpan.FromSeconds(0.5);
 
-
-            paddle = new F2D.Graphics.Sprite();
+            borderSys = new BorderSystem();
+            borderSys.Initialize();
         }
 
         public override void LoadContent()
         {
             if (content == null)
                 content = new ContentManager(Director.Game.Services);
+
+            paddle = new F2D.Graphics.Sprite();
 
             paddle.Initialize("Paddle", new Vector2(Director.Game.Window.ClientBounds.Width / 2, Director.Game.Window.ClientBounds.Height / 2),0.5f);
             paddle.LoadContent(this.content, @"Content\Graphics\paddle");
@@ -93,22 +97,22 @@ namespace Scatter.Logic
             }
 
             /* Game input */
-
             for (int i = 0; i < InputState.MaxInputs; i++)
             {
                 if (input.CurrentKeyboardStates[i].IsKeyDown(Keys.A))
-                    paddle.Rotation -= 0.01f;
+                    paddle.Rotation -= 0.015f;
 
                 if (input.CurrentKeyboardStates[i].IsKeyDown(Keys.D))
-                    paddle.Rotation += 0.01f;
+                    paddle.Rotation += 0.015f;
             }
-
+            
             paddle.Position = Director.Rat.Position;
+            //paddle.Rotation = TurnToFace(paddle.Position, Director.Rat.Position, paddle.Rotation, 180f);
 
         }
 
         private static float TurnToFace(Vector2 position, Vector2 faceThis,
-    float currentAngle, float turnSpeed)
+                                        float currentAngle, float turnSpeed)
         {
             // consider this diagram:
             //         C 

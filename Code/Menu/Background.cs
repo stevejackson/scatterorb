@@ -12,7 +12,7 @@ using Scatter.Logic;
 
 namespace Scatter.Menu
 {
-    class Background : Level
+    class Background : F2D.Core.GameScreen
     {
         ContentManager content;
         Texture2D backgroundTexture;
