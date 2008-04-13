@@ -3,3 +3,4 @@
   * Not sure if we fixed LoadContent/UnloadContent problem
     * Definitely need comprehensive tests for 0.3, content system is inconsistent/unreliable
   * Using XML for every sprite is a bit of a hassle
+  * Physics.CS is in F2D, should be game specific
