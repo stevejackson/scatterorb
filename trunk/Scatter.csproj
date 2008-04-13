@@ -56,9 +56,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Code\Logic\BorderSystem.cs" />
+    <Compile Include="Code\Logic\BorderTile.cs" />
+    <Compile Include="Code\Logic\BorderType.cs" />
     <Compile Include="Code\Logic\Level.cs" />
     <Compile Include="Code\Logic\Orb.cs" />
-    <Compile Include="Code\Logic\Tube.cs" />
     <Compile Include="Code\Menu\Background.cs" />
     <Compile Include="Code\Menu\MainMenu.cs" />
     <Compile Include="Code\Menu\MenuEntry.cs" />

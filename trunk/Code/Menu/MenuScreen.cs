@@ -11,7 +11,6 @@ namespace Scatter.Menu
 {
     abstract class MenuScreen : GameScreen
     {
-
         #region Input
 
         public bool InputMenuUp
@@ -127,6 +126,16 @@ namespace Scatter.Menu
         {
             this.UnloadContent();
             OnCancel();
+        }
+
+        public override void UnloadContent()
+        {
+            base.UnloadContent();
+        
+            foreach (MenuEntry i in menuEntries) 
+            {
+               // i.UnloadContent();
+            }
         }
 
         public override void Update(GameTime gameTime, bool otherScreenHasFocus,
