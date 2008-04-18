@@ -49,7 +49,6 @@ namespace Scatter.Logic
             Orb orb = new Orb();
             orb.Initialize();
             orb.LoadContent();
-            orb.sprite.Position = this.position;
             orbs.Add(orb);
         }
     }

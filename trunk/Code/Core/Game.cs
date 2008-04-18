@@ -44,6 +44,7 @@ namespace Scatter.Core
 
             this.IsFixedTimeStep = false;
             base.Initialize();
+
         }
 
         protected override void LoadContent()
@@ -65,7 +66,7 @@ namespace Scatter.Core
             director.Update(gameTime);
             base.Update(gameTime);
 
-            //Window.Title = Director.FramesPerSecond.ToString();
+            Window.Title = Director.FramesPerSecond.ToString();
 
         }
 
