@@ -75,6 +75,8 @@ namespace Scatter.Logic
             bottom[8].ResetType(BorderType.RedTube);
             
             /* loop through and attach appropriate orb emitters */
+            float offset = 100;
+            
             for (int i = 0; i < top.Length; i++)
             {
                 if (top[i].borderType == BorderType.RedOrbEmitter ||
@@ -83,6 +85,7 @@ namespace Scatter.Logic
                 {
                     OrbEmitter oe = new OrbEmitter();
                     oe.position = top[i].sprite.Position;
+                    oe.offset = new Vector2(0, offset);
                     orbEmitters.Add(oe);
                 }
 
@@ -92,6 +95,7 @@ namespace Scatter.Logic
                 {
                     OrbEmitter oe = new OrbEmitter();
                     oe.position = bottom[i].sprite.Position;
+                    oe.offset = new Vector2(0, -offset);
                     orbEmitters.Add(oe);
                 }
             } 
@@ -104,6 +108,7 @@ namespace Scatter.Logic
                 {
                     OrbEmitter oe = new OrbEmitter();
                     oe.position = left[i].sprite.Position;
+                    oe.offset = new Vector2(offset, 0);
                     orbEmitters.Add(oe);
                 }
 
@@ -113,6 +118,7 @@ namespace Scatter.Logic
                 {
                     OrbEmitter oe = new OrbEmitter();
                     oe.position = right[i].sprite.Position;
+                    oe.offset = new Vector2(-offset, 0);
                     orbEmitters.Add(oe);
                 }
             }
