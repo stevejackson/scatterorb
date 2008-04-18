@@ -41,12 +41,13 @@ namespace Scatter.Logic
             sprite.LoadContent(Director.content, fn);
             sprite.Layer = 0.1f;
             sprite.Origin = new Vector2(sprite.Size.X / 2, sprite.Size.Y / 2);
+            
         }
 
         public void Update()
         {
             //this.sprite.Position += new Vector2(1f, 1f);
-            this.sprite.physicsBody.ApplyForce(new Vector2(200f, 0f));
+            //this.sprite.physicsBody.ApplyForce(new Vector2(200f, 0f));
         }
 
         public void UnloadContent()

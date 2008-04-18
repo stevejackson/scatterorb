@@ -19,6 +19,7 @@ namespace Scatter.Logic
         public double maxTime;
         public double lastShot;
         public Vector2 position;
+        public Vector2 offset;
 
         List<Orb> orbs = new List<Orb>();
 
@@ -49,6 +50,7 @@ namespace Scatter.Logic
             Orb orb = new Orb();
             orb.Initialize();
             orb.LoadContent();
+            orb.sprite.Position = this.position + this.offset;
             orbs.Add(orb);
         }
     }

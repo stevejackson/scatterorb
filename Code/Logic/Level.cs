@@ -86,8 +86,8 @@ namespace Scatter.Logic
         {
             base.Update(gameTime, otherScreenHasFocus, false);
 
-            Farseer.Physics.Update((float)gameTime.ElapsedGameTime.TotalSeconds);
             borderSys.Update();
+            Farseer.Physics.Update((float)gameTime.ElapsedGameTime.TotalSeconds);
         }
 
         public override void HandleInput(InputState input)
