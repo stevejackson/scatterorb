@@ -70,7 +70,7 @@ namespace Scatter.Logic
             paddle.Initialize("Paddle", new Vector2(Director.Game.Window.ClientBounds.Width / 2, Director.Game.Window.ClientBounds.Height / 2),0.5f);
             paddle.LoadContent(this.content, @"Content\Graphics\paddle");
 
-            Director.Rat.setVisible();
+            //Director.Rat.setVisible();
 
         }
 
@@ -92,8 +92,6 @@ namespace Scatter.Logic
 
         public override void HandleInput(InputState input)
         {
-            float force = 500;
-            Vector2 forceAmount = new Vector2(0);
 
             /* debug input */
             if (input.IsNewKeyPress(Keys.C))
@@ -103,29 +101,31 @@ namespace Scatter.Logic
 
             /* Game input */            
             for (int i = 0; i < InputState.MaxInputs; i++)
-            {               
-
+            {
+                paddle.physicsBody.LinearVelocity = Vector2.Zero;
+                paddle.physicsBody.AngularVelocity = 0f;
+           
                 if (input.CurrentKeyboardStates[i].IsKeyDown(Keys.A))
-                    forceAmount += new Vector2(-force, 0);
+                    paddle.physicsBody.LinearVelocity = new Vector2(-200, paddle.physicsBody.LinearVelocity.Y);
+                
+                if (input.CurrentKeyboardStates[i].IsKeyDown(Keys.D))                
+                    paddle.physicsBody.LinearVelocity = new Vector2(200, paddle.physicsBody.LinearVelocity.Y);
+                                
+                if (input.CurrentKeyboardStates[i].IsKeyDown(Keys.W))                
+                    paddle.physicsBody.LinearVelocity = new Vector2(paddle.physicsBody.LinearVelocity.X, -200);
+                
+                if (input.CurrentKeyboardStates[i].IsKeyDown(Keys.S))                
+                    paddle.physicsBody.LinearVelocity = new Vector2(paddle.physicsBody.LinearVelocity.X, 200);   
 
-                if (input.CurrentKeyboardStates[i].IsKeyDown(Keys.D))
-                    forceAmount += new Vector2(force, 0);
+                if (input.CurrentKeyboardStates[i].IsKeyDown(Keys.Left))
+                    paddle.physicsBody.AngularVelocity = -2f;
 
-                if (input.CurrentKeyboardStates[i].IsKeyDown(Keys.W))
-                    forceAmount += new Vector2(0, -force);
-
-                if (input.CurrentKeyboardStates[i].IsKeyDown(Keys.S))
-                    forceAmount += new Vector2(0, force);
+                if (input.CurrentKeyboardStates[i].IsKeyDown(Keys.Right))
+                    paddle.physicsBody.AngularVelocity = 2f;
             }
 
-            paddle.physicsBody.ApplyForce(forceAmount);
             
-
             paddle.Origin = new Vector2(paddle.Size.X / 2, paddle.Size.Y / 2);
-
-            //paddle.Position = Director.Rat.Position;
-            //paddle.Rotation = TurnToFace(paddle.Position, Director.Rat.Position, paddle.Rotation, 180f);
-
         }
 
         private static float TurnToFace(Vector2 position, Vector2 faceThis,
@@ -202,8 +202,6 @@ namespace Scatter.Logic
         {
             Rectangle fullscreen = new Rectangle(0, 0, 1600, 1200);
             byte fade = TransitionAlpha;
-
-            Director.Game.Window.Title = paddle.physicsBody.Torque.ToString();
 
         }
 
