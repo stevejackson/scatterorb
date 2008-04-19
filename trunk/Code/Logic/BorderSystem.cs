@@ -125,11 +125,11 @@ namespace Scatter.Logic
             
         }
 
-        public void Update()
+        public void Update(Sprite paddle)
         {
             for (int i = 0; i < orbEmitters.Count; i++)
             {
-                orbEmitters[i].Update();
+                orbEmitters[i].Update(paddle);
             }
         }
 

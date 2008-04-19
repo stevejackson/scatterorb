@@ -31,7 +31,7 @@ namespace Scatter.Logic
             position = new Vector2();
         }
 
-        public void Update()
+        public void Update(Sprite paddle)
         {
             if (Director.GameTime.TotalGameTime.TotalSeconds - lastShot > minTime)
             {
@@ -41,7 +41,7 @@ namespace Scatter.Logic
 
             foreach (Orb o in orbs)
             {
-                o.Update();
+                o.Update(paddle);
             }
         }
 

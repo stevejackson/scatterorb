@@ -7,10 +7,10 @@
     <Mass>20</Mass>
   </Asteroid>
   <Paddle>
-	<Shape>Rect</Shape>
+	<Shape>Circle</Shape>
 	<Rotation>0</Rotation>
 	<Static>false</Static>
-	<Mass>10</Mass>
+	<Mass>100</Mass>
   </Paddle>
 	<BorderTile>
 		<Shape>Rect</Shape>

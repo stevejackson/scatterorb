@@ -11,12 +11,21 @@ namespace Scatter.Menu
         public MainMenu()
             : base("Scatter")
         {
+
+
+        }
+
+        public override void LoadContent()
+        {
+            base.LoadContent();
+
             // Create our menu entries.
             MenuEntry levelMenuEntry = new MenuEntry("Endurance Mode", @"Content\Graphics\menu\buttons\endmode");
             MenuEntry exitMenuEntry = new MenuEntry("Exit", @"Content\Graphics\menu\buttons\exit");
 
-            levelMenuEntry.LoadContent(Director.content);
-            exitMenuEntry.LoadContent(Director.content);
+            levelMenuEntry.LoadContent(this.content);
+            exitMenuEntry.LoadContent(this.content);
+
 
             // Hook up menu event handlers.
             levelMenuEntry.Selected += LevelMenuEntrySelected;
@@ -28,7 +37,6 @@ namespace Scatter.Menu
 
             levelMenuEntry.Button.Position = new Vector2(1200, 200);
             exitMenuEntry.Button.Position = new Vector2(1200, 400);
-
         }
 
         void LevelMenuEntrySelected(object sender, EventArgs e)

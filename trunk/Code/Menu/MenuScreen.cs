@@ -134,7 +134,7 @@ namespace Scatter.Menu
         
             foreach (MenuEntry i in menuEntries) 
             {
-               // i.UnloadContent();
+               i.UnloadContent();
             }
         }
 

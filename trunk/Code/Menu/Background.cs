@@ -14,7 +14,6 @@ namespace Scatter.Menu
 {
     class Background : F2D.Core.GameScreen
     {
-        ContentManager content;
         Texture2D backgroundTexture;
 
         public Background()
@@ -25,8 +24,7 @@ namespace Scatter.Menu
 
         public override void LoadContent()
         {
-            if (content == null)
-                content = new ContentManager(Director.Game.Services);
+            base.LoadContent();
 
            // backgroundTexture = content.Load<Texture2D>(@"Content\Graphics\menu\starfield");
         }
