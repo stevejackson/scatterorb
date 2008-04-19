@@ -10,6 +10,7 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 using F2D.Graphics;
 using F2D.Core;
+using F2D.Input;
 
 namespace Scatter.Logic
 {
@@ -44,10 +45,72 @@ namespace Scatter.Logic
             
         }
 
-        public void Update()
+        public void Update(Sprite paddle)
         {
-            //this.sprite.Position += new Vector2(1f, 1f);
-            //this.sprite.physicsBody.ApplyForce(new Vector2(200f, 0f));
+            //this.sprite.physicsBody.AngularVelocity = 0f;
+            bool attract = false;
+            bool repel = false;
+
+            if (Director.Rat.LState == Rat.State.Down)
+                attract = true;
+
+            else if (Director.Rat.RState == Rat.State.Down)
+                repel = true;
+
+            if (attract)
+            {
+                //get the distance between the 2 objects from edge-to-edge (not center-to-center)
+                float dist = Vector2.Distance(paddle.Position, this.sprite.Position);
+                dist -= paddle.Size.X;
+                dist -= (this.sprite.Size.X / 8f);
+
+                //get a vector in the proper direction            
+                Vector2 diff = new Vector2();
+                diff = paddle.Position - this.sprite.Position;
+
+                /* calculate the power of the pull
+                 * C/(d^p)
+                 * C = power constant
+                 * d = distance
+                 * p = 1 - linear movement
+                 *     2 - fast as it gets closer
+                 *     3 - insanely fast as it gets closer.. 
+                 */
+                float power = 1000000f / ((float)Math.Pow(dist, 1.25f));
+
+                //retain the direction, but give it proper power
+                diff.Normalize();
+                diff *= power;
+
+                this.sprite.physicsBody.ApplyForce(diff);
+            }
+            else if (repel)
+            {
+                //get the distance between the 2 objects from edge-to-edge (not center-to-center)
+                float dist = Vector2.Distance(paddle.Position, this.sprite.Position);
+                dist -= paddle.Size.X;
+                dist -= (this.sprite.Size.X / 8f);
+
+                //get a vector in the proper direction            
+                Vector2 diff = new Vector2();
+                diff = paddle.Position - this.sprite.Position;
+
+                /* calculate the power of the pull
+                 * C/(d^p)
+                 * C = power constant
+                 * d = distance
+                 * p = 1 - linear movement
+                 *     2 - fast as it gets closer
+                 *     3 - insanely fast as it gets closer.. 
+                 */
+                float power = 1000000f / ((float)Math.Pow(dist, 1.25f));
+
+                //retain the direction, but give it proper power
+                diff.Normalize();
+                diff *= power;
+
+                this.sprite.physicsBody.ApplyForce(-diff);
+            }
         }
 
         public void UnloadContent()

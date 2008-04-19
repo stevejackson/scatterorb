@@ -66,16 +66,19 @@ namespace Scatter.Logic
                 content = new ContentManager(Director.Game.Services);
 
             paddle = new F2D.Graphics.Sprite();
-
-            paddle.Initialize("Paddle", new Vector2(Director.Game.Window.ClientBounds.Width / 2, Director.Game.Window.ClientBounds.Height / 2),0.5f);
+            paddle.Initialize(
+                new Vector2(Director.Game.Window.ClientBounds.Width / 2, Director.Game.Window.ClientBounds.Height / 2),
+                "Circle",
+                50f);
             paddle.LoadContent(this.content, @"Content\Graphics\paddle");
-
+            paddle.PhysicsGeometry.RestitutionCoefficient = 0f;
             //Director.Rat.setVisible();
 
         }
 
         public override void UnloadContent()
         {
+            base.UnloadContent();
             paddle.UnloadContent();
 
             Director.Rat.setVisible();
@@ -86,7 +89,7 @@ namespace Scatter.Logic
         {
             base.Update(gameTime, otherScreenHasFocus, false);
 
-            borderSys.Update();
+            borderSys.Update(paddle);
             Farseer.Physics.Update((float)gameTime.ElapsedGameTime.TotalSeconds);
         }
 
@@ -100,29 +103,27 @@ namespace Scatter.Logic
             }
 
             /* Game input */            
-            for (int i = 0; i < InputState.MaxInputs; i++)
-            {
+
                 paddle.physicsBody.LinearVelocity = Vector2.Zero;
                 paddle.physicsBody.AngularVelocity = 0f;
            
-                if (input.CurrentKeyboardStates[i].IsKeyDown(Keys.A))
+                if (input.CurrentKeyboardState.IsKeyDown(Keys.A))
                     paddle.physicsBody.LinearVelocity = new Vector2(-200, paddle.physicsBody.LinearVelocity.Y);
                 
-                if (input.CurrentKeyboardStates[i].IsKeyDown(Keys.D))                
+                if (input.CurrentKeyboardState.IsKeyDown(Keys.D))                
                     paddle.physicsBody.LinearVelocity = new Vector2(200, paddle.physicsBody.LinearVelocity.Y);
                                 
-                if (input.CurrentKeyboardStates[i].IsKeyDown(Keys.W))                
+                if (input.CurrentKeyboardState.IsKeyDown(Keys.W))                
                     paddle.physicsBody.LinearVelocity = new Vector2(paddle.physicsBody.LinearVelocity.X, -200);
                 
-                if (input.CurrentKeyboardStates[i].IsKeyDown(Keys.S))                
+                if (input.CurrentKeyboardState.IsKeyDown(Keys.S))                
                     paddle.physicsBody.LinearVelocity = new Vector2(paddle.physicsBody.LinearVelocity.X, 200);   
 
-                if (input.CurrentKeyboardStates[i].IsKeyDown(Keys.Left))
+                if (input.CurrentKeyboardState.IsKeyDown(Keys.Left))
                     paddle.physicsBody.AngularVelocity = -2f;
 
-                if (input.CurrentKeyboardStates[i].IsKeyDown(Keys.Right))
+                if (input.CurrentKeyboardState.IsKeyDown(Keys.Right))
                     paddle.physicsBody.AngularVelocity = 2f;
-            }
 
             
             paddle.Origin = new Vector2(paddle.Size.X / 2, paddle.Size.Y / 2);
